@@ -1,0 +1,11 @@
+<tr <%if podcast.future?%>class="future"<%end%> >
+  <td><%= podcast.title %></td>
+  <td><%= link_to podcast.filename, podcast.public_filename, :title => "Listen MP3" %></td>
+  <td><%= podcast.created_at.strftime("%d/%m/%Y %H:%M") %></td>
+  <td><%= podcast.is_active ? "YES" : "NO" %></td>
+  <td>
+    <%= link_to "view", podcast_path(podcast) %>
+    <%= link_to "edit", admin_edit_podcast_path(podcast) %>
+    <%= link_to "destroy", admin_podcast_path(podcast), :method => :delete, :confirm => "Are you sure?" %>
+  </td>
+</tr>

@@ -1,0 +1,3 @@
+page.insert_html :bottom, 'comment_list', :partial => 'comment_list', :object => @current_comment, :locals=>{:hide=>true}
+page.visual_effect :blind_down, "#{@current_comment.id}"
+page[:comment_comment].value = ''

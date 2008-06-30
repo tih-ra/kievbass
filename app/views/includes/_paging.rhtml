@@ -1,0 +1,7 @@
+<% if paging.number == @pages.current_page.number %>
+<span class="page selected"><%= paging.number %></span>
+<% else %>
+<span class="page"><%= link_to paging.number,  :action=>'page', :id=>paging.number %></span>
+<% end %>
+
+

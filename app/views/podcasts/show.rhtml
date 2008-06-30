@@ -1,0 +1,12 @@
+<div class="podcast article"> 
+  <h3>
+    <span class="date"><%=@podcast.created_at.to_formatted_s(:long)%></span><br />
+    <%= @podcast.title %>
+  </h3>
+  <div class="download">
+    <%= link_to "скачать mp3", @podcast.public_filename,:class => "icon_link download"%>
+  </div>
+  <div class="body">
+    <%= RedCloth.new(@podcast.description).to_html %>
+  </div>
+</div>

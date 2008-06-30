@@ -1,0 +1,44 @@
+CommentableController
+=====================
+
+This plugin is more of a guideline than anything else, but it works very well. It assumes that you are using a polymorphic association to bind the comments in the model (This plugin was created with Juixe's ActsAsCommentable plugin in mind). It also assumes that you have some sort of authentication system to bind users to comments. The ActsAsAuthenticated and RESTful Authentication plugins provide a current_user method which is also assumed to be available for this plugin. To get up and running quickly install the authentication library of your choice (or custom bake your own with a current_user method available in controllers). Then install the ActsAsCommentable plugin and then install this plugin.
+
+Install commentable controller:
+script/plugin install http://commentctrler.rubyforge.org/svn/commentable_controller
+
+Instructions on how to Install acts as commentable:
+http://juixe.com/svn/acts_as_commentable/README
+
+Installing RESTful authentication:
+script/plugin install http://svn.techno-weenie.net/projects/plugins/restful_authentication
+
+Instructions on how to install RESTful Authentication:
+http://svn.techno-weenie.net/projects/plugins/restful_authentication/README
+
+When everything is installed, you can now create the commentable controller:
+
+script/generate controller comments
+
+Once generated, put the commentable call at the top. It should look something like this:
+
+class CommentsController < ApplicationController
+  before_filter :login_required
+  commentable
+end
+
+Now open your routes.rb file and ensure all the resources you want are commentable. An example is below:
+
+map.resources :articles do |article|
+  article.resources :comments
+end 
+
+Another example:
+
+%w(news_post article).each do |content|
+  map.resources :comments, :name_prefix => "#{content}_", :path_prefix => "/#{content}s/:#{content}_id"
+end
+
+You can now comment on those resources by supplying the create action with the necessary parameters. In order to create this form, I could either create a polymorphic controller, or I could manually create the form tags for each resource and send it to the path /news/1/comments (for example). I will post an example of a polymorphic controller soon, and perhaps get a project going on rubyforge. If you have any problems, post on the forums of the rubyforge project: http://rubyforge.org/projects/commentctrler/ or email me (Lance Carlson) lancecarlson at gmail dot com.
+
+TODO:
+Generator

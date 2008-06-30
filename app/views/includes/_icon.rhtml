@@ -1,0 +1,13 @@
+<% if icon_user==0 %>
+<% if current_user.icon %>
+		<%= image_tag(url_for_file_column(current_user, "icon"), :width=>size, :align=>"left", :hspace=>5) %>
+	<% else %>
+		<%= image_tag("userpics/default.gif", :width=>size, :align=>"left", :hspace=>5) %>
+	<% end %>
+<% else %>
+	<% if icon_user.icon %>
+		<%= image_tag(url_for_file_column(icon_user, "icon"), :width=>size, :align=>"left", :hspace=>5) %>
+	<% else %>
+		<%= image_tag("userpics/default.gif", :width=>size, :align=>"left", :hspace=>5) %>
+	<% end %>
+<% end %>

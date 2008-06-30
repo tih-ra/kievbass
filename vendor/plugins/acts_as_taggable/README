@@ -1,0 +1,31 @@
+ActsAsTaggable
+==============
+
+Allows for tags to be added to multiple classes.
+
+
+Prerequisites
+=============
+
+ActsAsTaggable relies on the tags and taggings tables to keep track of the state of tags.  First create the migration to build these tables.
+
+  rake acts_as_taggable:db:create
+  
+Then migrate your database to add these tables.
+
+  rake db:migrate
+
+
+Example
+=======
+
+  class Person < ActiveRecord::Base
+    acts_as_taggable
+  end
+
+  class Message < ActiveRecord::Base
+    acts_as_taggable
+  end
+
+
+Copyright (c) 2007 Joshua Peek, released under the MIT license

@@ -1,0 +1,12 @@
+<% if session[:user] %>
+Темы:
+<div id="talk">
+<%= render :partial => "talk", :collection => @talks, :locals => {:extended_content => false} %>
+</div>
+<%= will_paginate @talks %>
+<% if session[:user] %>
+<%= render (:partial => "create_talk_form") %>
+<% end %>
+<% else %>
+<h2>Чтобы видеть этот раздел вы должны быть авторизированы!</h2>
+<% end %>

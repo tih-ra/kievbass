@@ -1,0 +1,19 @@
+<h1>Articles</h1>
+
+<%= link_to "Create ARTICLE", admin_new_article_url %>
+
+<table>
+  <thead>
+    <tr>
+      <td>Title</td>
+      <td>Date</td>
+      <td>Active</td>
+      <td>&nbsp;</td>
+    </tr>
+  </thead>
+  <tbody>
+    <%= render :partial => 'article', :collection => @articles %>
+  </tbody>
+</table>
+
+<%= pagination_links(@pages, :window_size => 30) %>

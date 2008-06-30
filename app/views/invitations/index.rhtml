@@ -1,0 +1,20 @@
+<% if session[:user] %>
+<div id="ivitations">
+	Количество приглашений: <span class="selected"><%= current_user.invitations %></span>
+	<br/>
+	<br/>
+	<h3>Мои друзья:</h3>
+	<%= render :partial => "users", :collection => @users %>
+	<br/>
+	<br/>
+	<% if current_user.invitations > 0 %>
+	<h3>Пригласить друга:</h3>
+	<%= render :partial => "create_form" %>
+	<% end %>
+</div>
+<% else %>
+<div id="ivitations">
+	<h3>Запрос приглашения:</h3>
+	<%= render :partial => "clean_invitation_form" %>
+</div>
+<% end %>

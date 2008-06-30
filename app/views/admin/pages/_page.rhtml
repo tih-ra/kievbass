@@ -1,0 +1,8 @@
+<tr>
+  <td><%=page.name%></td>
+  <td>
+    <%= link_to "view", page_path(page.name), :target => "_blank" %>
+    <%= link_to "edit", admin_edit_page_path(page.id) %>
+    <%= link_to "destroy", admin_page_path(page.id), :method => :delete %>
+  </td>
+</tr>

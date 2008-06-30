@@ -1,0 +1,16 @@
+<br/>
+<div class="article">
+  <h3>
+    <span class="date"><%= article.created_at.to_formatted_s(:long) %></span><br />
+    <%=link_to h(article.title), article_path(article.id)%>
+  </h3>
+  <div class="body">
+    <%= RedCloth.new(article.content).to_html %>
+    <% if defined?(extended_content) && extended_content %>
+      <%= RedCloth.new(article.extended_content).to_html %>
+    <% end %>
+  	<% if !params[:id] %>
+	<%= link_to "читать дальше", article_path(article.id), :anchor => "extended" %> / комментариев: <%= article.comments.count %> <% if session[:user] %> | <span class="selected"> новых: <strong> <%= new_comments_count(article) %> </strong></span> <% end %>
+	<% end %>
+	</div>
+</div>

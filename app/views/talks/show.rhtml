@@ -1,0 +1,13 @@
+<% if session[:user] %>
+<%= periodically_call_remote(:frequency => 8, :url => {:action => 'update_comment', :id => @talk.id})%>
+<% end %>
+<div id="talk_item">
+<%= render :partial => "talk", :locals => {:extended_content => true} %>
+</div>
+<% if session[:user] %>
+<div id="comment_list">
+<%= render(:partial => "comments/comment_list", :collection => @talk.comments) %>
+</div>
+<br/>
+<%= render (:partial => "comments/form", :locals => { :model => @talk }) %>
+<%end%>

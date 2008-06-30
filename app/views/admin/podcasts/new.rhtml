@@ -1,0 +1,6 @@
+<h1>Create new Podcast</h1>
+
+<% form_for :podcast, :url => admin_podcasts_path, :html => {:multipart => true}, :builder => TemplatedFormBuilder do |f| %>
+  <%= render :partial => "form", :locals => {:f => f} %>
+  <%= submit_tag "PUSH" %>
+<% end %> 

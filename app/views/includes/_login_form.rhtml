@@ -1,0 +1,25 @@
+<div id="userinfo">
+<% if session[:user] %> 
+<div class="minitext">
+Добро пожаловать <strong><%= current_user.login %></strong> ! <br/><%=link_to "Выход", logout_path%> |  <%= link_to_redbox('Профиль', 'userpics') %>
+</div>
+
+<div class="miniicon">
+<% if current_user.icon %>
+<%= link_to_redbox( image_tag(url_for_file_column(current_user, "icon"), :width=>30, :align=>"left", :hspace=>5), 'userpics') %>
+<% else %>
+<%= link_to_redbox( image_tag("userpics/default.gif", :width=>30, :align=>"left", :hspace=>5), 'userpics') %>
+<% end %> 
+</div>
+<div id="userpics" style="display:none;"><%= render :partial => 'includes/profile' %></div>
+<% else %>
+<div class="miniicon">
+<% form_tag sessions_path do -%>
+<%= text_field_tag 'login' %></p>
+
+<%= password_field_tag 'password' %></p>
+<p align="right"><%= submit_tag 'Log in' %></p>
+<% end -%>
+</div>
+<% end %>
+</div>

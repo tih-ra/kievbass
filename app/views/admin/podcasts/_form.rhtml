@@ -1,0 +1,6 @@
+<%= error_messages_for "podcast"%>
+
+<%= f.text_field "title", :label => "Title", :required => true %>
+<%= f.text_area "description", :label => "Description", :required => true %>
+<%= f.file_field "uploaded_data", :label => "Mp3", :required => true %>
+<%= f.check_box "is_active", :label => "Is Active" %>

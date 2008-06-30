@@ -1,0 +1,5 @@
+<h1>Create new Page</h1>
+
+<% form_for :page, :url => admin_pages_path, :builder => TemplatedFormBuilder, :html => {:id => "page_form"} do |f|%>
+  <%= render :partial => "form", :locals => {:f => f} %>
+<% end %>

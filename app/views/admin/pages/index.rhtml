@@ -1,0 +1,14 @@
+<h1>Pages</h1>
+<%= link_to "Create new Page", admin_new_page_path %>
+<table>
+  <thead>
+    <tr>
+      <td>Name</td>
+      <td>Actions</td>
+    </tr>
+  </thead>
+  <tbody>
+    <%= render :partial => "page", :collection => @pages %>
+  </tbody>
+</table>
+<%= pagination_links @pages_of_pages  %>

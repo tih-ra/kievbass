@@ -1,0 +1,17 @@
+<br/>
+<br/>
+<h4>Создать тему:</h4>
+<% remote_form_for :talk, :url=>talks_path do |f| %>
+
+  Заголовок:<br/>
+  <%= f.text_field :title, :size=>50 %>
+  <br/>
+  Комментарий:<br/>
+  <%= textile_editor 'talk', 'content', :rows=>6, :style=>'width: 470px; padding: 5px' -%>
+  <%= f.hidden_field :is_active, :value => 1 %>
+  <%= f.hidden_field :user_id, :value => current_user.id %>
+  
+  <br/>
+  <%= submit_tag 'Add Talk Topic' %>
+<%= textile_editor_initialize -%>
+<% end %>

@@ -1,0 +1,5 @@
+<div class="users">
+	<%= render :partial => 'includes/icon', :locals=>{:size=>30, :icon_user=>users } %><span class="user"><%= users.login%></span>&nbsp;&nbsp;<%= mail_to(users.email, users.email, 
+	:subject => "From #{current_user.email}", 
+	:encode => "javascript") %>&nbsp;&nbsp;<span class="date"><font size="-3"><%= users.created_at.to_formatted_s(:long) %></font></span>
+</div>

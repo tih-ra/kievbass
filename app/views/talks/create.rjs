@@ -1,0 +1,7 @@
+page[:talk].replace_html :partial => 'talk', :collection => @talks
+page[:current_talk].visual_effect :blind_down 
+page[:current_talk].visual_effect :highlight, 
+:startcolor => "#879b90", 
+:endcolor => "#FFFFFF"
+page[:talk_content].value = ''
+page[:talk_title].value = ''

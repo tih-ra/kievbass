@@ -1,0 +1,8 @@
+<%= error_messages_for "article"%>
+
+<%= f.text_field "title", :label => "Title", :required => true, :size => 90 %>
+<%=image_tag("admin/global_editor.gif", :alt => "VISUAL EDITOR", :onclick => "setEditor('article_content', 'news', '400','400')")%>
+<%= f.text_area "content", :label => "Content", :required => true, :cols => 90 %>
+<%=image_tag("admin/global_editor.gif", :alt => "VISUAL EDITOR", :onclick => "setEditor('article_extended_content', 'news', '400','400')")%>
+<%= f.text_area "extended_content", :label => "Extended content", :cols => 90 %>
+<%= f.check_box "is_active", :label => "Is Active" %>

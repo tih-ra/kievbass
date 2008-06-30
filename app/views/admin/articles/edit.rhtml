@@ -1,0 +1,6 @@
+<h1>Edit Article</h1>
+
+<% form_for :article, :url => admin_article_path(@article.id), :html => {:method => :put}, :builder => TemplatedFormBuilder do |f| %>
+  <%= render :partial => "form", :locals => {:f => f} %>
+  <%= submit_tag "PUSH" %>
+<% end %>

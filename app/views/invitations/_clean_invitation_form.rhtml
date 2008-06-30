@@ -1,0 +1,11 @@
+<%= flash[:notice] %>
+<%= error_messages_for :invitation %>
+<% form_for :invitation, :url => invitations_path do |f| -%>
+<p><label for="about_me">Короткая информация, почему вы хотите стать нашим пользоватилем</label><br/>
+<%= f.text_area :about_me, :cols=>40, :rows=>7 %></p>
+
+<p><label for="email">Email</label><br/>
+<%= f.text_field :email %></p>
+
+<p><%= submit_tag 'Send' %></p>
+<% end -%>

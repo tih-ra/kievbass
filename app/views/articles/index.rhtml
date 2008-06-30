@@ -1,0 +1,4 @@
+<%= render :partial => "article", :collection => @articles, :locals => {:extended_content => false} %>
+<br/>
+<%#= render :partial => "includes/paging", :collection => @pages %>
+<%=will_paginate @articles%>

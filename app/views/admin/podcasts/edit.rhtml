@@ -1,0 +1,6 @@
+<h1>Edit Podcast</h1>
+
+<% form_for :podcast, :url => admin_podcast_path(@podcast.id), :html => {:multipart => true, :method => :put}, :builder => TemplatedFormBuilder do |f| %>
+  <%= render :partial => "form", :locals => {:f => f} %>
+  <%= submit_tag "PUSH" %>
+<% end %>

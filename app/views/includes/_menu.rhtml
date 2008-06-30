@@ -1,0 +1,12 @@
+<div id="menu">
+  <table>
+    <tr>
+      <td><%=link_to image_tag(menu_image_path("articles", "blog"), :alt => "BLOG", :title => "Blog"), home_path%></td>
+      <td><%=link_to image_tag(menu_image_path("podcasts", "podcasts"), :alt => "PODCASTS", :title => "Podcasts"), podcasts_path%></td>
+      <td><%=link_to image_tag(menu_image_path(current_page?("talk"), "talk"), :alt => "TALK", :title => "Talk"), talks_path %></td>
+      <td><%=link_to image_tag(menu_image_path(current_page?("crew"), "crew"), :alt => "CREW", :title => "Crew"), page_path("crew") %></td>
+      <td><%=link_to image_tag(menu_image_path(current_page?("friends"), "friends"), :alt => "FRIENDS", :title => "Friends"), page_path("friends") %></td>
+      <td><%=link_to image_tag(menu_image_path(current_page?("invitations"), "invitations"), :alt => "INVITATIONS", :title => "Invitations"), invitations_path %></td>
+    </tr>
+  </table>
+</div>

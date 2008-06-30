@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru">
+<head>
+  <title>Admin: <%= controller.action_name %></title>
+  <%= stylesheet_link_tag 'cms' %> 
+  <%= javascript_include_tag "prototype", "effects", "fckeditor/fckeditor", "cmsforms" %>
+  <%#= active_scaffold_includes %>
+</head>
+<body>
+  <%= render :partial => 'includes/admin/menu' %>
+  <%= yield %>
+</body>
+</html>

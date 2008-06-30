@@ -1,0 +1,14 @@
+
+<div id=<%=comment_list.id%> style="float:left;" class="comment <%= cycle('bg-odd', 'bg-even') %>">
+    <div class="topic">
+		<% if session[:user] and current_user.admin %>
+		<div><%=link_to image_tag("talk_delete.gif", :alt => "DELETE"), comment_path(comment_list), :method=>:delete, :confirm => "А ты уверен?" %></div>
+		<% end %>
+	<span class="user"> <font size="-3">by</font> <%= comment_list.user.login %> </span> <span class="date"><%= comment_list.created_at.to_formatted_s(:long) %>  
+	</span> 
+	</div>
+   <div class="body">
+	<div style="float:left;width:65px;"><%= render :partial => 'includes/icon', :locals=>{:size=>65, :icon_user=>comment_list.user} %></div>
+	<div style="float:right;width:395px;"><div style="float:left;"><%=sanitize simple_format auto_link(comment_list.comment) %></div></div>
+   </div>
+</div>

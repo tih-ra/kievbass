@@ -1,0 +1,26 @@
+<% if session[:user] and current_user.admin %>
+<div><%=link_to image_tag("talk_delete.gif", :alt => "DELETE"), talk_path(talk.id), :method=>:delete, :confirm => "А ты уверен?" %>&nbsp;<%=link_to image_tag("talk_totop#{talk.priority}.gif", :alt => "TO TOP"), talk_path(talk.id), :method=>:put %></div>
+<% end %>
+<div <% if talk.id == @current_talk.id %> id="current_talk" style="display:none;" <% else %>  <% end %> 
+ class="talk_topic" <% if !params[:id] %> onmouseOver="$(this).removeClassName('talk_topic');$(this).addClassName('talk_inside');" onmouseOut="$(this).removeClassName('talk_inside');$(this).addClassName('talk_topic');" onClick="location.href ='<%= talk_path(talk.id) %>'" <% end %>>
+    <%= render :partial => 'includes/icon', :locals=>{:size=>65, :icon_user=>talk.user } %>
+    <span class="title"><%= talk.title %></span><span class="date"><%= talk.created_at.to_formatted_s(:long) %> </span>
+    
+    <span class="user"><font size="-3">by</font> (<%= talk.user.login %>)</span>
+    
+    
+    <% if !params[:id] %>
+	<div id="total_comments_div" style="display: block;">
+	<div>комментариев: <strong><%= talk.comments.count %></strong>   <% if session[:user] %> | <span class="selected"> новых: <strong> <%= new_comments_count(talk) %> </strong> </span><% end %></div>
+	</div>
+	<% else %>
+	<div class="body"><%=sanitize auto_link textilize(talk.content) %></div>
+	<% end %>
+	
+    <% if session[:user] %>
+
+    <% else %>
+	<%=link_to "Для просмотра комментариев необходимо пройти авторизацию", login_path, :class=> "title" %>
+	<% end %>
+  </div>
+</div>

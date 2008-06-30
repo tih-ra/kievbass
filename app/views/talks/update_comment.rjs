@@ -1,0 +1,8 @@
+#page.insert_html 'comment_list', :partial=>"comment_list" ,:object => @comments
+
+# Insert a new person
+#page.insert_html :top, &#8216;asset_list&#8217;, render(:partial => &#8216;articles/asset&#8217;, :object => @asset)
+
+page.insert_html :bottom, 'comment_list', render(:partial => 'comments/comment_list', :collection => @comments)
+
+

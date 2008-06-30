@@ -1,0 +1,6 @@
+<div class="li_podcast">
+  <h3>
+    <div class="date"><%= podcast.created_at.to_formatted_s(:long) %></div>
+    <%= link_to podcast.title, podcast_path(podcast.id) %>
+  </h3>
+</div>
