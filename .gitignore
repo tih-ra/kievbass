@@ -1,0 +1,4 @@
+*.log
+db/schema.rb
+config/database.yml
+vendor/rails/
