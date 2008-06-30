@@ -1,0 +1,27 @@
+<% content_for :tc_left do %>
+	<h1>Users</h1>
+<% end %>
+<% content_for :tc_right do%>
+	<h1>List</h1>
+<% end %>
+<%=render :partial => "includes/admin/top_control"%>
+<p style="padding-top:10px">
+<%= will_paginate @users%>
+</p>
+<div class="span-24">
+<table>
+  <thead>
+    <tr class="title">
+	  <td style="width:30px">&nbsp;</td>
+      <td>Login</td>
+      <td>Email</td>
+      <td>Invitations</td>
+	  <td>&nbsp;</td>
+    </tr>
+  </thead>
+  <tbody>
+    <%= render :partial => "user", :collection => @users %>
+  </tbody>
+</table>
+<%= will_paginate @users  %>
+</div>

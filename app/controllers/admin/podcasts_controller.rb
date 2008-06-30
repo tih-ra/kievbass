@@ -3,7 +3,7 @@ class Admin::PodcastsController < Admin::BaseController
   before_filter :find_podcast, :only => [:edit, :update, :destroy]
 
   def index
-    @pages, @podcasts = paginate("podcasts", :order => "podcasts.created_at DESC", :per_page => 50, :include => :user)
+    @podcasts = Podcast.all.paginate(:page => params[:page], :per_page => 50)
   end
 
   def create

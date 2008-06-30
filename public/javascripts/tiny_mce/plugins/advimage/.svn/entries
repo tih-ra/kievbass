@@ -1,0 +1,79 @@
+8
+
+dir
+1866
+svn://frendid-web.brainberry.com.ua/frendid_com/public/javascripts/tiny_mce/plugins/advimage
+svn://frendid-web.brainberry.com.ua
+
+
+
+2008-04-01T17:13:42.399839Z
+826
+tih
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+94409d5f-52c0-4372-a4fa-56ddde109ce3
+
+editor_plugin.js
+file
+
+
+
+
+2008-06-11T10:24:38.000000Z
+848ad22a9baff75c57d0d7f645f361ba
+2008-04-01T17:13:42.399839Z
+826
+tih
+has-props
+
+langs
+dir
+
+editor_plugin_src.js
+file
+
+
+
+
+2008-06-11T10:24:38.000000Z
+baa82468df8d1ca9c67cd38e5b6f55c6
+2008-04-01T17:13:42.399839Z
+826
+tih
+has-props
+
+css
+dir
+
+image.htm
+file
+
+
+
+
+2008-06-11T10:24:38.000000Z
+4174a4cd04bccb44d8fe1847d15871e5
+2008-04-01T17:13:42.399839Z
+826
+tih
+has-props
+
+img
+dir
+
+js
+dir
+

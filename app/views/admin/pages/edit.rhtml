@@ -1,5 +1,13 @@
-<h1>Edit Page</h1>
+<% content_for :tc_left do %>
+	<h1>Pages</h1>
+<% end %>
+<% content_for :tc_right do%>
+	<h1>Edit Page</h1>
+<% end %>
+<%=render :partial => "includes/admin/top_control"%>
+<div class="span-24">
 
 <% form_for :page, :url => admin_page_path(@page.id), :builder => TemplatedFormBuilder, :html => {:id => "page_form", :method => :put} do |f|%>
   <%= render :partial => "form", :locals => {:f => f} %>
 <% end %>
+</div>

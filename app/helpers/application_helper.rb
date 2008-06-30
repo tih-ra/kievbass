@@ -6,5 +6,7 @@ module ApplicationHelper
   def current_page? page
     @page && @page.name == page
   end
-  
+  def set_button button_type
+    image_tag "icons/#{button_type}.png"
+  end
 end

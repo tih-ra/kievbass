@@ -1,0 +1,76 @@
+8
+
+dir
+1866
+svn://frendid-web.brainberry.com.ua/frendid_com/public/javascripts/tiny_mce/plugins/searchreplace
+svn://frendid-web.brainberry.com.ua
+
+
+
+2008-04-01T17:13:42.399839Z
+826
+tih
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+94409d5f-52c0-4372-a4fa-56ddde109ce3
+
+editor_plugin.js
+file
+
+
+
+
+2008-06-11T10:24:39.000000Z
+3154c3cb319e9dd9c5994ae7125ad4f2
+2008-04-01T17:13:42.399839Z
+826
+tih
+has-props
+
+langs
+dir
+
+editor_plugin_src.js
+file
+
+
+
+
+2008-06-11T10:24:39.000000Z
+1246e382a76c59f1ea7f8e67ab8c3e4b
+2008-04-01T17:13:42.399839Z
+826
+tih
+has-props
+
+css
+dir
+
+searchreplace.htm
+file
+
+
+
+
+2008-06-11T10:24:39.000000Z
+06c98f16bbfdf78fb09b09eb5985d080
+2008-04-01T17:13:42.399839Z
+826
+tih
+has-props
+
+js
+dir
+

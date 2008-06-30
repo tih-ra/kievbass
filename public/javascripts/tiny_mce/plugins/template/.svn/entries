@@ -1,0 +1,89 @@
+8
+
+dir
+1866
+svn://frendid-web.brainberry.com.ua/frendid_com/public/javascripts/tiny_mce/plugins/template
+svn://frendid-web.brainberry.com.ua
+
+
+
+2008-04-01T17:13:42.399839Z
+826
+tih
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+94409d5f-52c0-4372-a4fa-56ddde109ce3
+
+editor_plugin.js
+file
+
+
+
+
+2008-06-11T10:24:39.000000Z
+c1a5bdcddb320343e461d071ef2c1c4e
+2008-04-01T17:13:42.399839Z
+826
+tih
+has-props
+
+template.htm
+file
+
+
+
+
+2008-06-11T10:24:39.000000Z
+c3e7c9adec672fad5f654e599ea22a26
+2008-04-01T17:13:42.399839Z
+826
+tih
+has-props
+
+langs
+dir
+
+editor_plugin_src.js
+file
+
+
+
+
+2008-06-11T10:24:39.000000Z
+8ad59f480b9e5ff88660af5930a0d16f
+2008-04-01T17:13:42.399839Z
+826
+tih
+has-props
+
+css
+dir
+
+js
+dir
+
+blank.htm
+file
+
+
+
+
+2008-06-11T10:24:39.000000Z
+9553e76581d74579d23bea5c7ea8a807
+2008-04-01T17:13:42.399839Z
+826
+tih
+has-props
+

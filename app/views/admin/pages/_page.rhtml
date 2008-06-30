@@ -1,8 +1,9 @@
-<tr>
+<tr class="<%= cycle("even", "odd") -%>">
+  <td><%=(@pages.index(page).to_i+1).to_s%>.</td>
   <td><%=page.name%></td>
   <td>
-    <%= link_to "view", page_path(page.name), :target => "_blank" %>
-    <%= link_to "edit", admin_edit_page_path(page.id) %>
-    <%= link_to "destroy", admin_page_path(page.id), :method => :delete %>
+    <%= link_to set_button("view"), page_path(page.name), :target => "_blank" %>
+    <%= link_to set_button("edit"), edit_admin_page_path(page.id) %>
+    <%= link_to set_button("destroy"), admin_page_path(page.id), :method => :delete %>
   </td>
 </tr>

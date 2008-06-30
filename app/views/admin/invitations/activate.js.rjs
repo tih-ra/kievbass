@@ -1,0 +1,2 @@
+page.replace_html "code_#{@invitation.id}", @invitation.activation_code
+page.visual_effect :highlight, "code_#{@invitation.id}"

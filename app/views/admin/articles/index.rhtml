@@ -1,11 +1,19 @@
-<h1>Articles</h1>
-
-<%= link_to "Create ARTICLE", admin_new_article_url %>
-
+<% content_for :tc_left do %>
+	<h1>Articles</h1>
+<% end %>
+<% content_for :tc_right do%>
+	<%= link_to "Create ARTICLE", new_admin_article_url %>
+<% end %>
+<%=render :partial => "includes/admin/top_control"%>
+<p style="padding-top:10px">
+<%= will_paginate @articles%>
+</p>
+<div class="span-24">
 <table>
   <thead>
-    <tr>
-      <td>Title</td>
+    <tr class="title">
+     <td>&nbsp;</td> 
+     <td>Title</td>
       <td>Date</td>
       <td>Active</td>
       <td>&nbsp;</td>
@@ -16,4 +24,5 @@
   </tbody>
 </table>
 
-<%= pagination_links(@pages, :window_size => 30) %>
+<%= will_paginate @articles %>
+</div>

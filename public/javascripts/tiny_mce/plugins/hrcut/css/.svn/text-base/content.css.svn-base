@@ -1,0 +1,5 @@
+hr.cut
+{
+  border: 0px dashed gray;
+  border-top-width:1px;
+}

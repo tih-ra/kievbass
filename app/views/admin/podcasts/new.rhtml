@@ -1,6 +1,14 @@
-<h1>Create new Podcast</h1>
-
+<% content_for :tc_left do %>
+	<h1>Podcasts</h1>
+<% end %>
+<% content_for :tc_right do%>
+	<h1>Create new Podcast</h1>
+<% end %>
+<%=render :partial => "includes/admin/top_control"%>
+<div class="span-24">
+	
 <% form_for :podcast, :url => admin_podcasts_path, :html => {:multipart => true}, :builder => TemplatedFormBuilder do |f| %>
   <%= render :partial => "form", :locals => {:f => f} %>
   <%= submit_tag "PUSH" %>
 <% end %> 
+</div>

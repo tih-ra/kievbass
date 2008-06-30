@@ -1,11 +1,21 @@
-<h1>Podcasts</h1>
 
-<%= link_to "Create PODCAST", admin_new_podcast_url %>
-
+<% content_for :tc_left do %>
+	<h1>Podcasts</h1>
+<% end %>
+<% content_for :tc_right do%>
+	<%= link_to "Create PODCAST", new_admin_podcast_url %>
+<% end %>
+<%=render :partial => "includes/admin/top_control"%>
+<p style="padding-top:10px">
+<%= will_paginate @podcasts%>
+</p>
+<div class="span-24">
+	
 <table>
   <thead>
-    <tr>
-      <td>Title</td>
+    <tr class="title">
+      <td>&nbsp;</td>
+	  <td>Title</td>
       <td>File</td>
       <td>Date</td>
       <td>Active</td>
@@ -17,4 +27,5 @@
   </tbody>
 </table>
 
-<%= pagination_links(@pages, :window_size => 30) %>
+<%=will_paginate @podcasts%>
+</div>

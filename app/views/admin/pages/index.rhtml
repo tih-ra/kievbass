@@ -1,14 +1,25 @@
-<h1>Pages</h1>
-<%= link_to "Create new Page", admin_new_page_path %>
+<% content_for :tc_left do %>
+	<h1>Pages</h1>
+<% end %>
+<% content_for :tc_right do%>
+	<%= link_to "Create new Page", new_admin_page_path %>
+<% end %>
+<%=render :partial => "includes/admin/top_control"%>
+<p style="padding-top:10px">
+<%= will_paginate @pages%>
+</p>
+<div class="span-24">
 <table>
   <thead>
-    <tr>
+    <tr class="title">
+	  <td style="width:30px">&nbsp;</td>
       <td>Name</td>
-      <td>Actions</td>
+      <td style="width:80px">Actions</td>
     </tr>
   </thead>
   <tbody>
     <%= render :partial => "page", :collection => @pages %>
   </tbody>
 </table>
-<%= pagination_links @pages_of_pages  %>
+<%= will_paginate @pages  %>
+</div>

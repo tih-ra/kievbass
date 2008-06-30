@@ -1,0 +1,115 @@
+8
+
+dir
+1866
+svn://frendid-web.brainberry.com.ua/frendid_com/public/javascripts/tiny_mce/plugins/table
+svn://frendid-web.brainberry.com.ua
+
+
+
+2008-04-01T17:13:42.399839Z
+826
+tih
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+94409d5f-52c0-4372-a4fa-56ddde109ce3
+
+editor_plugin.js
+file
+
+
+
+
+2008-06-11T10:24:38.000000Z
+13fef39cd0807f080ca40496be3ff170
+2008-04-01T17:13:42.399839Z
+826
+tih
+has-props
+
+langs
+dir
+
+cell.htm
+file
+
+
+
+
+2008-06-11T10:24:38.000000Z
+83307f78850b29a345e1c3d6da2f49ab
+2008-04-01T17:13:42.399839Z
+826
+tih
+has-props
+
+editor_plugin_src.js
+file
+
+
+
+
+2008-06-11T10:24:38.000000Z
+14db3bba320611acc7a9c5ad5d24a6e4
+2008-04-01T17:13:42.399839Z
+826
+tih
+has-props
+
+css
+dir
+
+merge_cells.htm
+file
+
+
+
+
+2008-06-11T10:24:38.000000Z
+e2c8360c37f1a4f7492ee555a9d2ff40
+2008-04-01T17:13:42.399839Z
+826
+tih
+has-props
+
+js
+dir
+
+row.htm
+file
+
+
+
+
+2008-06-11T10:24:38.000000Z
+d553eb9855c519d7c4a1d5ad2bae8929
+2008-04-01T17:13:42.399839Z
+826
+tih
+has-props
+
+table.htm
+file
+
+
+
+
+2008-06-11T10:24:38.000000Z
+6d391eb53e8dda170e25d5a29f697872
+2008-04-01T17:13:42.399839Z
+826
+tih
+has-props
+

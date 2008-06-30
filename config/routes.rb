@@ -22,7 +22,7 @@ ActionController::Routing::Routes.draw do |map|
     admin.resources :podcasts, :controller => "admin/podcasts"
     admin.resources :pages, :controller => "admin/pages", :new => {:preview => :any}
     admin.resources :articles, :controller => "admin/articles", :edit => {:update => :any}
-    admin.resources :invitations, :controller => "admin/invitations"
+    admin.resources :invitations, :controller => "admin/invitations", :member=>{:activate=>:get}
     admin.resources :users, :controller => "admin/users"
   end
 

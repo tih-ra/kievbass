@@ -1,0 +1,8 @@
+
+<%= error_messages_for "user"%>
+
+<%= f.text_field "login", :label => "Login", :required => true, :style=>"width:50%", :class=>"title" %>
+<%= f.text_field "password", :label => "Password", :required => true, :style=>"width:50%", :class=>"title" %>
+<%= f.text_field "password_confirmation", :label => "Confirm Password", :required => true, :style=>"width:50%", :class=>"title" %>
+<%= f.text_field "invitations", :label => "Invintations", :required => true, :style=>"width:20%", :class=>"title" %>
+<%= submit_tag "Save", :id => "save_submit" %>

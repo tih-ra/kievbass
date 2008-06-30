@@ -1,13 +1,11 @@
 <%= error_messages_for :page %>
 
-<%= f.text_field :name, :label => "Name", :required => true %>
-<%=image_tag("admin/global_editor.gif", :alt => "VISUAL EDITOR", :onclick => "setEditor('page_content', 'news', '400','400')")%>
-<%= f.text_area :content, :label => "Content", :required => true %>
-
+<%= f.text_field :name, :label => "Name", :required => true, :style=>"width:99%", :class=>"title" %>
+<%= f.text_area :content, :label => "Content (#{link_to_function('On/Off Visual Editor', 'toggleEditor(\'e_content\');return false;')})", :required => true, :style=>"width:99%;height:400px", :id=>"e_content" %>
 <%= submit_tag "Preview", :id => "preview_submit" %> <%= submit_tag "Save", :id => "save_submit" %>
 
 <script>
-  var previewAction = <%= admin_preview_new_page_path.inspect %> ;
+  var previewAction = <%= preview_new_admin_page_path.inspect %> ;
   var originalAction = $('page_form').action ;
   $('save_submit').addEventListener("click", function(){ this.form.action = originalAction; this.form.target = "_self"; return true;}, false);
   $('preview_submit').addEventListener("click", function(){ this.form.action = previewAction; this.form.target = "preview_frame"; return true;}, false);
@@ -15,4 +13,4 @@
 
 
 <h2>Preview</h2>
-<iframe src="<%= @page.nil? || @page.new_record? ? "about:blank" : page_path(@page.name)%>" id="preview_frame" name="preview_frame"></iframe>
+<iframe width="99%" height="400px" src="<%= @page.nil? || @page.new_record? ? "about:blank" : page_path(@page.name)%>" id="preview_frame" name="preview_frame"></iframe>

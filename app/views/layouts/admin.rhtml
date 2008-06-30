@@ -3,12 +3,20 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru">
 <head>
   <title>Admin: <%= controller.action_name %></title>
-  <%= stylesheet_link_tag 'cms' %> 
-  <%= javascript_include_tag "prototype", "effects", "fckeditor/fckeditor", "cmsforms" %>
+	
+  <%= stylesheet_link_tag 'blueprint/screen', :media=>"screen, projection" %> 
+  <%= javascript_include_tag "prototype", "effects", "facebox", "cmsforms", "application"  %>
+  <%= stylesheet_link_tag 'admin' %> 
+<%= stylesheet_link_tag 'facebox/facebox' %>
+ <%= stylesheet_link_tag 'admin_pagination' %> 
+	<%= javascript_include_tiny_mce_if_used %>
+	<%= tiny_mce if using_tiny_mce? %>
   <%#= active_scaffold_includes %>
 </head>
 <body>
+  <div class="container">  
   <%= render :partial => 'includes/admin/menu' %>
   <%= yield %>
+  </div>
 </body>
 </html>

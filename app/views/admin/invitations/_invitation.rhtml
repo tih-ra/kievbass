@@ -1,0 +1,16 @@
+<tr class="<%= cycle("even", "odd") -%>">
+  <td><%= (@invitations.index(invitation).to_i+1).to_s %>.</td>
+  <td><%= invitation.email %></td>
+  <td id="code_<%=invitation.id%>"><%= invitation.activation_code %></td>
+  <td><%= invitation.created_at.strftime("%d/%m/%Y %H:%M") %></td>
+  
+  <td>
+	<%= link_to set_button("info"), admin_invitation_path(invitation), :rel=>"facebox", :id=>"link_#{invitation.id}"%>
+	<%= link_to_remote set_button("approve"), :url=>activate_admin_invitation_path(invitation), :method=>:get%>
+	
+	
+    <%#= link_to set_button("view"), article_path(article), :target => "_blank" %>
+    <%#= link_to set_button("edit"), edit_admin_article_path(article) %>
+    <%#= link_to set_button("destroy"), admin_article_path(article), :method => :delete, :confirm => "Are you sure?" %>
+  </td>
+</tr>
