@@ -3,3 +3,4 @@ db/schema.rb
 config/database.yml
 vendor/rails/
 public/user/
+config/*.yml
