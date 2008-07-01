@@ -1,6 +1,6 @@
 <tr class="<%= cycle("even", "odd") -%>">
   <td><%= (@articles.index(article).to_i+1).to_s %>.</td>
-  <td><%= article.title %></td>
+  <td><%= truncate(article.title, 100) %></td>
   <td><%= article.created_at.strftime("%d/%m/%Y %H:%M") %></td>
   <td><%= article.is_active ? "YES" : "NO" %></td>
   <td>
