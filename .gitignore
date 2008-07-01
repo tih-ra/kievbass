@@ -4,3 +4,5 @@ config/database.yml
 vendor/rails/*
 public/user/*
 config/*.yml
+tmp/*
+log/*
