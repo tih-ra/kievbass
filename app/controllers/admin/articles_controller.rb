@@ -22,7 +22,7 @@ class Admin::ArticlesController < Admin::BaseController
                 :only => [:new, :edit])
   
   def index
-    @articles = Article.all.paginate(:page => params[:page], :per_page => 20)
+    @articles = Article.paginate(:page => params[:page], :per_page => 20, :order=>"created_at DESC")
   end
 
   def update
