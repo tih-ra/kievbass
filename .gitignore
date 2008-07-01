@@ -1,6 +1,6 @@
 *.log
 db/schema.rb
 config/database.yml
-vendor/rails/
+vendor/rails
 public/user/
 config/*.yml
