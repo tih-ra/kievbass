@@ -1,0 +1,23 @@
+.tinyMceTopMenu {color:#A8ACB1;
+	font-family: Verdana;
+	font-size: 12px;
+}
+.tinyMceTopMenu .part1 .link, .tinyMceTopMenu .part1 .selectedLink {display:block;float:left;width:150px;height:27px;text-align:center;line-height:27px;border-left:1px solid #D5D5D5;border-top:1px solid #D5D5D5;cursor:pointer;}
+.tinyMceTopMenu .part1 .link {border-bottom:1px solid #D5D5D5;background:#F2F6F7;}
+.tinyMceTopMenu .part1 .selectedLink {color:#0092D4;background:#F1F7FC;}
+.tinyMceTopMenu .part1 .empty {float:none;margin-left:302px;height:27px;border:1px solid #D5D5D5;}
+.tinyMceTopMenu .part2 {height:30px;line-height:30px;border-right:1px solid #D5D5D5;border-bottom:1px solid #D5D5D5;border-left:1px solid #D5D5D5;background:#F1F7FC;}
+.tinyMceTopMenu .part2 .htmlButton {float:right;width:100px;height:18px;margin:5px 5px 0 0;background:url('img/html-reminder-button.png') no-repeat;cursor:pointer;}
+
+.tinyMcePopup {position:absolute;width:450px;height:185px;color:#A8ACB1;background:url('img/tiny-mce-popup-bg.png') no-repeat;}
+.tinyMcePopup .inner {margin:10px;}
+.tinyMcePopup span.title, .tinyMceImageInsert span.title{font-size:17px;color:#0092D4;}
+.nicEdit-panelContain {
+	border: 1px solid #cccccc;
+}
+.btePanel .nicEdit-panelContain {
+	border-top: none;
+}
+.btePanel .nicEdit-main {
+	color: #000;
+}

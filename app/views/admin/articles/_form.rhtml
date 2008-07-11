@@ -3,5 +3,5 @@
 
 <%= f.text_field "title", :label => "Title", :required => true, :style=>"width:99%", :class=>"title" %>
 <%= f.text_area "content", :label => "Content", :required => true, :style=>"width:99%;height:100px",:class=>"mceNoEditor" %>
-<%= f.text_area "extended_content", :label => "Extended content (#{link_to_function('On/Off Visual Editor', 'toggleEditor(\'e_content\');return false;')})", :cols => 90, :style=>"width:99%;height:400px", :id=>"e_content"%>
+<%= f.text_area "extended_content", :label => "Extended content", :cols => 90, :style=>"width:99%;height:400px", :id=>"e_content"%>
 <%= f.check_box "is_active", :label => "Is Active" %>

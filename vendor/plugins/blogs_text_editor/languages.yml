@@ -1,0 +1,18 @@
+ru:
+  visual_editor: Визуальный редактор
+  html_editor: HTML редактор
+  insert_picture: Вставить изображение
+  insert_embed: Вставить embed
+  image_from_url: Изображение по URL
+  image_from_file: Изображение с файла
+  image_from_album: Изображение с альбома
+  choose_album: Выбрать альбом
+en:
+  visual_editor: Visual editor
+  html_editor: HTML editor
+  insert_picture: Post image
+  insert_embed: Post embed
+  image_from_url: Image from URL
+  image_from_file: Image from file
+  image_from_album: Album image
+  choose_album: Choose Album
