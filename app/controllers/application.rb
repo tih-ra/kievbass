@@ -3,6 +3,7 @@ class ApplicationController < ActionController::Base
   layout proc {|controller|
     controller.params[:format].nil? || controller.params[:format] == "html" ? "site" : nil
   }
+  before_filter :partial_updates_control
   before_filter :define_sidebar
 
   helper_method :admin?
@@ -10,7 +11,11 @@ class ApplicationController < ActionController::Base
   def admin?
     current_user && current_user.admin
   end
-
+  
+  def partial_updates_control
+    UserSubscribe.partial_updates = false
+  end
+  
   protected
 
   def rescue_action(exception)
