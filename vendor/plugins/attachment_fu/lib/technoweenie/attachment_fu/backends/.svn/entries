@@ -1,0 +1,52 @@
+8
+
+dir
+2095
+svn://frendid-web.brainberry.com.ua/frendid_com/vendor/plugins/attachment_fu/lib/technoweenie/attachment_fu/backends
+svn://frendid-web.brainberry.com.ua
+
+
+
+2008-06-16T10:03:23.741566Z
+1634
+tih
+
+
+svn:special svn:externals svn:needs-lock
+
+file_system_backend.rb
+file
+
+
+
+
+2008-06-14T12:00:10.000000Z
+0d82c995469fed52774e20b31a42d939
+2008-06-16T10:03:23.741566Z
+1634
+tih
+
+db_file_backend.rb
+file
+
+
+
+
+2008-06-14T12:00:10.000000Z
+e8b9a4647f4f4a803ff55a93ae14deee
+2008-06-16T10:03:23.741566Z
+1634
+tih
+
+s3_backend.rb
+file
+
+
+
+
+2008-06-14T12:00:10.000000Z
+6f346b69ba2a6ef9cce5709665295ae3
+2008-06-16T10:03:23.741566Z
+1634
+tih
+

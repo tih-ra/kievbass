@@ -1,0 +1,88 @@
+8
+
+dir
+2095
+svn://frendid-web.brainberry.com.ua/frendid_com/vendor/plugins/attachment_fu/vendor/red_artisan/core_image/filters
+svn://frendid-web.brainberry.com.ua
+
+
+
+2008-06-16T10:03:23.741566Z
+1634
+tih
+
+
+svn:special svn:externals svn:needs-lock
+
+watermark.rb
+file
+
+
+
+
+2008-06-14T12:00:10.000000Z
+f5763a27690307e67959d7f0afcacd86
+2008-06-16T10:03:23.741566Z
+1634
+tih
+
+color.rb
+file
+
+
+
+
+2008-06-14T12:00:10.000000Z
+2b7157f746fd3af06483547671225860
+2008-06-16T10:03:23.741566Z
+1634
+tih
+
+effects.rb
+file
+
+
+
+
+2008-06-14T12:00:10.000000Z
+b19e25a530d524fa113badc96dfa3f55
+2008-06-16T10:03:23.741566Z
+1634
+tih
+
+scale.rb
+file
+
+
+
+
+2008-06-14T12:00:10.000000Z
+e3f812d04a8217ce38f3760b6f6fce63
+2008-06-16T10:03:23.741566Z
+1634
+tih
+
+quality.rb
+file
+
+
+
+
+2008-06-14T12:00:10.000000Z
+dc4cedefa76febc98912c5eab222a7a8
+2008-06-16T10:03:23.741566Z
+1634
+tih
+
+perspective.rb
+file
+
+
+
+
+2008-06-14T12:00:10.000000Z
+5d7233283244a33ff17030a34e3e77f8
+2008-06-16T10:03:23.741566Z
+1634
+tih
+
