@@ -9,6 +9,6 @@
 	</div>
    <div class="body">
 	<div style="float:left;width:65px;"><%= render :partial => 'includes/icon', :locals=>{:size=>65, :icon_user=>comment_list.user} %></div>
-	<div style="float:right;width:395px;"><div style="float:left;"><%=sanitize simple_format auto_link(comment_list.comment) %></div></div>
+	<div style="float:right;width:395px;"><div style="float:left;"><%=white_list auto_link simple_format(comment_list.comment) %></div></div>
    </div>
 </div>
