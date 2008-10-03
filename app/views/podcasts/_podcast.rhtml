@@ -3,4 +3,5 @@
     <div class="date"><%= podcast.created_at.to_formatted_s(:long) %></div>
     <%= link_to podcast.title, podcast_path(podcast.id) %>
   </h3>
+комментариев: <%= podcast.comments.count %> <% if session[:user] %> | <span class="selected"> новых: <strong> <%= new_comments_count(podcast) %> </strong></span> <% end %>
 </div>

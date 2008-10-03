@@ -18,6 +18,6 @@
 </div>
 <%= render (:partial => "comments/form", :locals => { :model => @podcast }) %>
 <% else %>
-<%=link_to "Для просмотра комментариев необходимо пройти авторизацию", login_path, :class=> "title" %>
+<br/><%=link_to "Для просмотра комментариев необходимо пройти авторизацию", login_path, :class=> "title" %>
 <% end %>
 </div>

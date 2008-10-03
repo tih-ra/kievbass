@@ -24,4 +24,13 @@ module ApplicationHelper
 			<!-- AddThis Button END -->"
   end
   
+  def new_comments_count(obj)
+		subscribe = obj.user_subscribes.find_by_user_id(current_user.id)
+  	unless subscribe.nil?
+  	  obj.comments.count(:all, :conditions=>["created_at > ? and user_id != ?", subscribe.updated_at, current_user.id])
+    else
+      obj.comments.count
+    end
+	end
+	
 end
