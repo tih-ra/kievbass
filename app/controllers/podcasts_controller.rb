@@ -1,7 +1,7 @@
 class PodcastsController < ApplicationController
 
   def index
-    @podcasts = Podcast.active_only.paginate(:page => params[:page], :per_page => 15)
+    @podcasts = Podcast.active_only.paginate(:page => params[:page], :per_page => 400)
   end
 
   def show
