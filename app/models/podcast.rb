@@ -4,7 +4,7 @@ class Podcast < ActiveRecord::Base
 
   has_attachment :storage => :file_system, :size => 0..300.megabytes
   acts_as_postable_content
-  
+  acts_as_commentable
   validates_as_attachment
   validates_length_of :title, :maximum => 255
   validates_presence_of :title

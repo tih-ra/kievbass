@@ -9,4 +9,15 @@
   <div class="body">
     <%= RedCloth.new(@podcast.description).to_html %>
   </div>
+<%=add_this_button(@podcast.title) %>
+<% if session[:user] %>
+<div id="comment_list">
+
+
+<%= render(:partial => "comments/comment_list", :collection => @podcast.comments) %>
+</div>
+<%= render (:partial => "comments/form", :locals => { :model => @podcast }) %>
+<% else %>
+<%=link_to "Для просмотра комментариев необходимо пройти авторизацию", login_path, :class=> "title" %>
+<% end %>
 </div>
