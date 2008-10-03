@@ -14,7 +14,7 @@ module ApplicationHelper
     	"<!-- AddThis Button BEGIN -->
 			<script type='text/javascript'>
 				addthis_pub  = 'kievbass';
-				addthis_logo            = 'http://frendid.com/images/logo_kievbass.png';
+				addthis_logo            = 'http://kievbass.com/images/logo_kievbass.png';
 				addthis_logo_background = 'ffffff';
 				addthis_logo_color      = 'ffffff';
 				addthis_brand           = 'kievbas.com';
