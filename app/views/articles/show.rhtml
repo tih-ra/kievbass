@@ -1,7 +1,10 @@
 <%= render :partial => "article", :locals => {:extended_content => true} %>
 <br/>
+<%=add_this_button(@article.title) %>
 <% if session[:user] %>
 <div id="comment_list">
+
+
 <%= render(:partial => "comments/comment_list", :collection => @article.comments) %>
 </div>
 <%= render (:partial => "comments/form", :locals => { :model => @article }) %>
