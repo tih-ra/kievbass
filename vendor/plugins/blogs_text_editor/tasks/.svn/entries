@@ -1,0 +1,28 @@
+8
+
+dir
+2910
+svn://frendid-web.brainberry.com.ua/frendid_com/vendor/plugins/blogs_text_editor/tasks
+svn://frendid-web.brainberry.com.ua
+
+
+
+2008-09-24T16:12:36.531392Z
+2857
+tih
+
+
+svn:special svn:externals svn:needs-lock
+
+blogs_text_editor_tasks.rake
+file
+
+
+
+
+2008-07-01T14:44:22.000000Z
+9659ae835555536a7aa830688b38283c
+2008-09-24T16:12:36.531392Z
+2857
+tih
+

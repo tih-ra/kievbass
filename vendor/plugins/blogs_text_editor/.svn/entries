@@ -1,0 +1,112 @@
+8
+
+dir
+2910
+svn://frendid-web.brainberry.com.ua/frendid_com/vendor/plugins/blogs_text_editor
+svn://frendid-web.brainberry.com.ua
+
+
+
+2008-09-24T16:12:36.531392Z
+2857
+tih
+
+
+svn:special svn:externals svn:needs-lock
+
+test
+dir
+
+Rakefile
+file
+
+
+
+
+2008-07-01T15:06:54.000000Z
+556566f2a0e3ae7e8763d80dd0956a2a
+2008-09-24T16:12:36.531392Z
+2857
+tih
+
+doc
+dir
+
+init.rb
+file
+
+
+
+
+2008-07-01T14:54:28.000000Z
+be33c9c0c63fc1d96f1c6ffe694b288b
+2008-09-24T16:12:36.531392Z
+2857
+tih
+
+tasks
+dir
+
+languages.yml
+file
+
+
+
+
+2008-09-16T10:09:21.000000Z
+c30b20c3b13139899642365179e840ed
+2008-09-24T16:12:36.531392Z
+2857
+tih
+
+lib
+dir
+
+install.rb
+file
+
+
+
+
+2008-07-01T14:44:22.000000Z
+cbe738c10eba4ae2da8c6859c9723e44
+2008-09-24T16:12:36.531392Z
+2857
+tih
+
+MIT-LICENSE
+file
+
+
+
+
+2008-07-11T16:10:30.000000Z
+5cce64b0c8023a96badf26adc6830eec
+2008-09-24T16:12:36.531392Z
+2857
+tih
+
+uninstall.rb
+file
+
+
+
+
+2008-07-01T14:44:22.000000Z
+2a5fc883fe7f8dfe22ced24643d59ad4
+2008-09-24T16:12:36.531392Z
+2857
+tih
+
+README
+file
+
+
+
+
+2008-07-01T14:44:22.000000Z
+864d5d66fa54f85d1343235e01425cfb
+2008-09-24T16:12:36.531392Z
+2857
+tih
+

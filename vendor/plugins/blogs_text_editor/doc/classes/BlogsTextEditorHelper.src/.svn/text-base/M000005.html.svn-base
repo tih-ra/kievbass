@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>blogs_text_editor_embed_popup (BlogsTextEditorHelper)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre><span class="ruby-comment cmt"># File lib/blogs_text_editor_helper.rb, line 114</span>
+  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">blogs_text_editor_embed_popup</span> <span class="ruby-identifier">object</span>, <span class="ruby-identifier">method</span>, <span class="ruby-identifier">tr</span>
+     <span class="ruby-identifier">cc1</span> = <span class="ruby-identifier">link_to_function</span> <span class="ruby-identifier">image_tag</span>(<span class="ruby-value str">&quot;/stylesheets/blogs_text_editor/img/close.png&quot;</span>, <span class="ruby-identifier">:style=</span><span class="ruby-operator">&gt;</span><span class="ruby-value str">&quot;float:right;&quot;</span>, <span class="ruby-identifier">:class</span>=<span class="ruby-operator">&gt;</span><span class="ruby-value str">&quot;icon&quot;</span>), <span class="ruby-value str">&quot;Bte.showHideClicker('tinyMceEmbedInsert');return false;&quot;</span>
+     <span class="ruby-identifier">cc1</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">content_tag</span>(<span class="ruby-value str">&quot;span&quot;</span>, <span class="ruby-node">&quot;#{tr['insert_embed']}&quot;</span>, <span class="ruby-identifier">:class</span>=<span class="ruby-operator">&gt;</span><span class="ruby-value str">&quot;title&quot;</span>)
+     <span class="ruby-identifier">cc1</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">content_tag</span>(<span class="ruby-value str">&quot;div&quot;</span>, <span class="ruby-value str">&quot;Скопируйте/вставте  embed-код  с Youtube, Myspace, Flickr и других ресурсов.&quot;</span>, <span class="ruby-identifier">:style=</span><span class="ruby-operator">&gt;</span><span class="ruby-value str">&quot;font-weight:normal;&quot;</span>)
+     <span class="ruby-identifier">cc1</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">content_tag</span>(<span class="ruby-value str">&quot;div&quot;</span>, <span class="ruby-value str">&quot;&quot;</span>, <span class="ruby-identifier">:class</span>=<span class="ruby-operator">&gt;</span><span class="ruby-value str">&quot;clear&quot;</span>)
+     <span class="ruby-identifier">cc1</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">text_area</span> <span class="ruby-value str">&quot;blogs_text_editor_embed&quot;</span>, <span class="ruby-value str">&quot;content&quot;</span>, <span class="ruby-identifier">:style=</span><span class="ruby-operator">&gt;</span><span class="ruby-value str">&quot;width:460px;height:80px&quot;</span>
+     <span class="ruby-identifier">cc1</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">content_tag</span>(<span class="ruby-value str">&quot;div&quot;</span>, <span class="ruby-value str">&quot;&amp;nbsp;&quot;</span>, <span class="ruby-identifier">:style=</span><span class="ruby-operator">&gt;</span><span class="ruby-value str">&quot;clear:both;padding:0;margin:0;height:5px;&quot;</span>)
+     <span class="ruby-identifier">cc1</span> <span class="ruby-operator">+=</span> <span class="ruby-node">&quot;&lt;img src='/stylesheets/blogs_text_editor/img/insert_embed.gif' style='float:right;margin-right:25px;' onclick='Bte.embedFormSubmit(\&quot;#{object}_#{method}\&quot;);'&gt;&quot;</span>
+     <span class="ruby-identifier">cc1</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">content_tag</span>(<span class="ruby-value str">&quot;div&quot;</span>, <span class="ruby-value str">&quot;&quot;</span>, <span class="ruby-identifier">:class</span>=<span class="ruby-operator">&gt;</span><span class="ruby-value str">&quot;clear&quot;</span>)
+     <span class="ruby-identifier">set_block</span> <span class="ruby-identifier">cc1</span>, <span class="ruby-value str">&quot;tinyMceEmbedInsert&quot;</span>
+  <span class="ruby-keyword kw">end</span></pre>
+</body>
+</html>

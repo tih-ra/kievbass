@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>blogs_text_editor_image_popup (BlogsTextEditorHelper)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre><span class="ruby-comment cmt"># File lib/blogs_text_editor_helper.rb, line 60</span>
+  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">blogs_text_editor_image_popup</span> <span class="ruby-identifier">object</span>, <span class="ruby-identifier">method</span>, <span class="ruby-identifier">tr</span>, <span class="ruby-identifier">options</span>
+                        <span class="ruby-identifier">cc1</span> = <span class="ruby-identifier">link_to_function</span> <span class="ruby-identifier">image_tag</span>(<span class="ruby-value str">&quot;/stylesheets/blogs_text_editor/img/close.png&quot;</span>, <span class="ruby-identifier">:style=</span><span class="ruby-operator">&gt;</span><span class="ruby-value str">&quot;float:right;&quot;</span>, <span class="ruby-identifier">:class</span>=<span class="ruby-operator">&gt;</span><span class="ruby-value str">&quot;icon&quot;</span>), <span class="ruby-value str">&quot;Bte.showHideClicker('tinyMceImageInsert');return false;&quot;</span>
+                                        <span class="ruby-identifier">cc1</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">content_tag</span>(<span class="ruby-value str">&quot;span&quot;</span>, <span class="ruby-node">&quot;#{tr['insert_picture']}&quot;</span>, <span class="ruby-identifier">:class</span>=<span class="ruby-operator">&gt;</span><span class="ruby-value str">&quot;title&quot;</span>)
+                                        <span class="ruby-identifier">cc1</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">content_tag</span>(<span class="ruby-value str">&quot;div&quot;</span>, <span class="ruby-value str">&quot;&amp;nbsp;&quot;</span>, <span class="ruby-identifier">:style=</span><span class="ruby-operator">&gt;</span><span class="ruby-value str">&quot;clear:both;padding:5px 0 5px 0&quot;</span>)
+          <span class="ruby-comment cmt">#BEGIN IMAGE FROM URL</span>
+          <span class="ruby-identifier">cc1</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">content_tag</span>(<span class="ruby-value str">&quot;div&quot;</span>, <span class="ruby-identifier">:style=</span><span class="ruby-operator">&gt;</span><span class="ruby-value str">&quot;float:left;margin:0;&quot;</span>) <span class="ruby-keyword kw">do</span>
+              <span class="ruby-identifier">radio_button</span> <span class="ruby-value str">&quot;blogs_text_editor_image&quot;</span>, <span class="ruby-value str">&quot;type&quot;</span>, <span class="ruby-value str">&quot;url&quot;</span>
+          <span class="ruby-keyword kw">end</span>
+                <span class="ruby-identifier">cc1</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">content_tag</span>(<span class="ruby-value str">&quot;div&quot;</span>, <span class="ruby-node">&quot;#{tr['image_from_url']}:&quot;</span>, <span class="ruby-identifier">:style=</span><span class="ruby-operator">&gt;</span><span class="ruby-value str">&quot;float:left;width:140px;margin:0 5px 0 5px;&quot;</span>)
+                
+                <span class="ruby-identifier">cc1</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">content_tag</span>(<span class="ruby-value str">&quot;div&quot;</span>, <span class="ruby-identifier">:style=</span><span class="ruby-operator">&gt;</span><span class="ruby-value str">&quot;float:left;margin:0;&quot;</span>) <span class="ruby-keyword kw">do</span>
+              <span class="ruby-identifier">text_field</span> <span class="ruby-value str">&quot;blogs_text_editor_image&quot;</span>, <span class="ruby-value str">&quot;url&quot;</span>
+          <span class="ruby-keyword kw">end</span>
+          <span class="ruby-identifier">cc1</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">content_tag</span>(<span class="ruby-value str">&quot;div&quot;</span>, <span class="ruby-value str">&quot;&amp;nbsp;&quot;</span>, <span class="ruby-identifier">:style=</span><span class="ruby-operator">&gt;</span><span class="ruby-value str">&quot;clear:both;padding:0;margin:0;height:5px;&quot;</span>)
+          <span class="ruby-comment cmt">#END IMAGE FROM URL</span>
+          <span class="ruby-comment cmt">#BEGIN IMAGE FROM FILE</span>
+          <span class="ruby-identifier">cc1</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">content_tag</span>(<span class="ruby-value str">&quot;div&quot;</span>, <span class="ruby-identifier">:style=</span><span class="ruby-operator">&gt;</span><span class="ruby-value str">&quot;float:left;margin:0;&quot;</span>) <span class="ruby-keyword kw">do</span>
+              <span class="ruby-identifier">radio_button</span> <span class="ruby-value str">&quot;blogs_text_editor_image&quot;</span>, <span class="ruby-value str">&quot;type&quot;</span>, <span class="ruby-value str">&quot;file&quot;</span>
+          <span class="ruby-keyword kw">end</span>
+                <span class="ruby-identifier">cc1</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">content_tag</span>(<span class="ruby-value str">&quot;div&quot;</span>, <span class="ruby-node">&quot;#{tr['image_from_file']}:&quot;</span>, <span class="ruby-identifier">:style=</span><span class="ruby-operator">&gt;</span><span class="ruby-value str">&quot;float:left;width:140px;margin:0 5px 0 5px;&quot;</span>)
+                
+          <span class="ruby-identifier">cc1</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">content_tag</span>(<span class="ruby-value str">&quot;div&quot;</span>, <span class="ruby-identifier">:id=</span><span class="ruby-operator">&gt;</span><span class="ruby-value str">&quot;bte_flashUI&quot;</span>) <span class="ruby-keyword kw">do</span>
+                  <span class="ruby-identifier">cc2</span> = <span class="ruby-value str">&quot;&lt;image id='btnBrowse' src='/stylesheets/blogs_text_editor/img/select_photo.gif' onclick='bte_fileBrowse.apply(bte_swfu)' style='padding:0;margin:0' /&gt;&quot;</span>
+                  <span class="ruby-identifier">cc2</span> <span class="ruby-operator">+=</span> <span class="ruby-value str">&quot;&amp;nbsp;&lt;input type='text' id='bte_txtFileName' disabled='true' style='border:none;background:#fff;width:110px;margin-top:5px;padding:0;vertical-align:top;' /&gt;&quot;</span>
+            <span class="ruby-identifier">cc2</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">content_tag</span>(<span class="ruby-value str">&quot;div&quot;</span>, <span class="ruby-value str">&quot;&lt;img src='/stylesheets/blogs_text_editor/img/preloader.gif'&gt;&quot;</span>, <span class="ruby-identifier">:id=</span><span class="ruby-operator">&gt;</span><span class="ruby-value str">&quot;bte_preloader&quot;</span>, <span class="ruby-identifier">:style=</span><span class="ruby-operator">&gt;</span><span class="ruby-value str">&quot;display:none;&quot;</span>)
+            <span class="ruby-identifier">cc2</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">content_tag</span>(<span class="ruby-value str">&quot;div&quot;</span>, <span class="ruby-value str">&quot;&quot;</span>, <span class="ruby-identifier">:id=</span><span class="ruby-operator">&gt;</span><span class="ruby-value str">&quot;fsUploadProgress&quot;</span>, <span class="ruby-identifier">:class</span>=<span class="ruby-operator">&gt;</span><span class="ruby-value str">&quot;flash&quot;</span>, <span class="ruby-identifier">:style=</span><span class="ruby-operator">&gt;</span><span class="ruby-value str">&quot;display:none;&quot;</span>)
+                  <span class="ruby-identifier">cc2</span> <span class="ruby-operator">+=</span> <span class="ruby-value str">&quot;&lt;input type='hidden' name='hidFileID' id='hidFileID' value='' /&gt;&quot;</span>
+                  <span class="ruby-identifier">cc2</span>
+                <span class="ruby-keyword kw">end</span>  
+                <span class="ruby-comment cmt">#cc1 += content_tag(&quot;div&quot;, :style=&gt;&quot;float:left;margin:0;&quot;) do</span>
+          <span class="ruby-comment cmt">#    file_field &quot;blogs_text_editor_image&quot;, &quot;file&quot;</span>
+          <span class="ruby-comment cmt">#end</span>
+          
+          <span class="ruby-identifier">cc1</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">content_tag</span>(<span class="ruby-value str">&quot;div&quot;</span>, <span class="ruby-value str">&quot;&amp;nbsp;&quot;</span>, <span class="ruby-identifier">:style=</span><span class="ruby-operator">&gt;</span><span class="ruby-value str">&quot;clear:both;padding:0;margin:0;height:5px;&quot;</span>)
+          <span class="ruby-comment cmt">#END IMAGE FROM FILE</span>
+          
+          <span class="ruby-comment cmt">#BEGIN IMAGE FROM ALBUM</span>
+          <span class="ruby-identifier">cc1</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">content_tag</span>(<span class="ruby-value str">&quot;div&quot;</span>, <span class="ruby-identifier">:style=</span><span class="ruby-operator">&gt;</span><span class="ruby-value str">&quot;float:left;margin:0;&quot;</span>) <span class="ruby-keyword kw">do</span>
+              <span class="ruby-identifier">radio_button</span> <span class="ruby-value str">&quot;blogs_text_editor_image&quot;</span>, <span class="ruby-value str">&quot;type&quot;</span>, <span class="ruby-value str">&quot;album&quot;</span>
+          <span class="ruby-keyword kw">end</span>
+                <span class="ruby-identifier">cc1</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">content_tag</span>(<span class="ruby-value str">&quot;div&quot;</span>, <span class="ruby-node">&quot;#{tr['image_from_album']}:&quot;</span>, <span class="ruby-identifier">:style=</span><span class="ruby-operator">&gt;</span><span class="ruby-value str">&quot;float:left;width:140px;margin:0 5px 0 5px;&quot;</span>)
+                
+                <span class="ruby-identifier">cc1</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">content_tag</span>(<span class="ruby-value str">&quot;div&quot;</span>, <span class="ruby-identifier">:style=</span><span class="ruby-operator">&gt;</span><span class="ruby-value str">&quot;float:left;margin:0;&quot;</span>) <span class="ruby-keyword kw">do</span>
+              <span class="ruby-identifier">link_to_function</span> <span class="ruby-node">&quot;#{tr['choose_album']}&quot;</span>, <span class="ruby-node">&quot;#{options[:album_image_function]} $('tinyMceImageInsert').hide();&quot;</span>
+          <span class="ruby-keyword kw">end</span>
+          <span class="ruby-identifier">cc1</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">content_tag</span>(<span class="ruby-value str">&quot;div&quot;</span>, <span class="ruby-value str">&quot;&amp;nbsp;&quot;</span>, <span class="ruby-identifier">:style=</span><span class="ruby-operator">&gt;</span><span class="ruby-value str">&quot;clear:both;padding:0;margin:0;height:5px;&quot;</span>)
+          <span class="ruby-comment cmt">#END IMAGE FROM ALBUM</span>
+          <span class="ruby-identifier">cc1</span> <span class="ruby-operator">+=</span> <span class="ruby-node">&quot;&lt;img src='/stylesheets/blogs_text_editor/img/insert_image.gif' style='float:right;margin-right:25px;' onclick='Bte.imageFormSubmit(\&quot;#{object}_#{method}\&quot;, \&quot;#{options[:image_upload_path]}\&quot;);'&gt;&quot;</span>
+          <span class="ruby-identifier">cc1</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">content_tag</span>(<span class="ruby-value str">&quot;div&quot;</span>, <span class="ruby-value str">&quot;&quot;</span>, <span class="ruby-identifier">:class</span>=<span class="ruby-operator">&gt;</span><span class="ruby-value str">&quot;clear&quot;</span>)
+          <span class="ruby-comment cmt">#cc1 += submit_tag &quot;#{tr['insert_picture']}&quot;, :style=&gt;&quot;float:right;margin-right:25px;&quot;, :onClick=&gt;&quot;Bte.imageFormSubmit('#{object}_#{method}', '#{options[:image_upload_path]}')&quot;</span>
+          <span class="ruby-identifier">set_block</span> <span class="ruby-identifier">cc1</span>, <span class="ruby-value str">&quot;tinyMceImageInsert&quot;</span>
+                 
+  <span class="ruby-keyword kw">end</span></pre>
+</body>
+</html>

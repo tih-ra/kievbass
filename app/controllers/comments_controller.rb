@@ -15,3 +15,4 @@ class CommentsController < ApplicationController
   def list
   end
 end
+

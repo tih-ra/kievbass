@@ -14,7 +14,7 @@ xml.rss( :version=>"2.0", "xmlns:itunes" => "http://www.itunes.com/dtds/podcast-
         xml.enclosure(:type => "audio/mpeg",  :url => mp3_url, :length => podcast.size)
         xml.description h(podcast.description)
         xml.tag!("itunes:summary", h(podcast.description))
-        xml.pubDate(podcast.created_at.to_s)
+        xml.pubDate(podcast.created_at.to_s(:rfc822))
       end
     end
   end

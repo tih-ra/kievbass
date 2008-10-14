@@ -3,7 +3,7 @@ class Admin::UsersController < Admin::BaseController
   before_filter :find_user, :only=>[:edit, :update, :destroy]
   
   def index
-    @users = User.paginate(:page => params[:page], :per_page => 20, :order=>"created_at DESC")
+    @users = User.paginate(:page => params[:page], :per_page => 100, :order=>"created_at DESC")
   end
  
   def edit

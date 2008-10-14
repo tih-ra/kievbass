@@ -1,0 +1,34 @@
+
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<!--
+
+    Methods
+
+  -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Methods</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="rdoc-style.css" type="text/css" />
+  <base target="docwin" />
+</head>
+<body>
+<div id="index">
+  <h1 class="section-bar">Methods</h1>
+  <div id="index-entries">
+    <a href="classes/BlogsTextEditorHelper.html#M000005">blogs_text_editor_embed_popup (BlogsTextEditorHelper)</a><br />
+    <a href="classes/BlogsTextEditorHelper.html#M000004">blogs_text_editor_image_popup (BlogsTextEditorHelper)</a><br />
+    <a href="classes/BlogsTextEditorHelper.html#M000002">blogs_text_editor_javascript (BlogsTextEditorHelper)</a><br />
+    <a href="classes/BlogsTextEditorHelper.html#M000003">blogs_text_editor_text_area (BlogsTextEditorHelper)</a><br />
+    <a href="classes/BlogsTextEditor/ClassMethods.html#M000008">configure_blogs_text_editor_panel (BlogsTextEditor::ClassMethods)</a><br />
+    <a href="classes/BlogsTextEditor.html#M000006">included (BlogsTextEditor)</a><br />
+    <a href="classes/BlogsTextEditor/LoadLanguage.html#M000007">set (BlogsTextEditor::LoadLanguage)</a><br />
+    <a href="classes/BlogsTextEditorTest.html#M000001">test_this_plugin (BlogsTextEditorTest)</a><br />
+  </div>
+</div>
+</body>
+</html>

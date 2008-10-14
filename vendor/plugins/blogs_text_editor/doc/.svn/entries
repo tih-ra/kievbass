@@ -1,0 +1,94 @@
+8
+
+dir
+2910
+svn://frendid-web.brainberry.com.ua/frendid_com/vendor/plugins/blogs_text_editor/doc
+svn://frendid-web.brainberry.com.ua
+
+
+
+2008-09-24T16:12:36.531392Z
+2857
+tih
+
+
+svn:special svn:externals svn:needs-lock
+
+fr_file_index.html
+file
+
+
+
+
+2008-07-11T16:11:22.000000Z
+be00755b27bc05524b14549ed941fc32
+2008-09-24T16:12:36.531392Z
+2857
+tih
+
+fr_method_index.html
+file
+
+
+
+
+2008-07-11T16:11:22.000000Z
+4d59c55af0d1067be0e110d1ebf0a433
+2008-09-24T16:12:36.531392Z
+2857
+tih
+
+files
+dir
+
+created.rid
+file
+
+
+
+
+2008-07-11T16:11:22.000000Z
+78ac3c4c6d425b6183a7ce7c509be394
+2008-09-24T16:12:36.531392Z
+2857
+tih
+
+fr_class_index.html
+file
+
+
+
+
+2008-07-11T16:11:22.000000Z
+a6dc862f63f34c3206dd09e4ec03664c
+2008-09-24T16:12:36.531392Z
+2857
+tih
+
+index.html
+file
+
+
+
+
+2008-07-11T16:11:22.000000Z
+acf5b9d1effc0a01c6d746168f572cc7
+2008-09-24T16:12:36.531392Z
+2857
+tih
+
+rdoc-style.css
+file
+
+
+
+
+2008-07-11T16:11:22.000000Z
+07cc32aa3b88f9911fe43613a29650a3
+2008-09-24T16:12:36.531392Z
+2857
+tih
+
+classes
+dir
+

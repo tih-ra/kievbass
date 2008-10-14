@@ -1,6 +1,7 @@
 class Admin::ArticlesController < Admin::BaseController
 
   before_filter :find_article, :only => [:edit, :update, :destroy]
+  configure_blogs_text_editor_panel(:options=>{:lang=>"ru", :image_upload_path=>"", :album_image_function=>""})
   
   
   def index
