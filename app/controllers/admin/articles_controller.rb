@@ -14,7 +14,7 @@ class Admin::ArticlesController < Admin::BaseController
   
   def update
     cut_article
-    @article.attributes = params[:article]
+    @article.update_attributes(params[:article])
     @article.save!
     redirect_to admin_articles_path
   end
