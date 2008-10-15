@@ -9,7 +9,7 @@ class Admin::ArticlesController < Admin::BaseController
   end
   
   def edit
-    @article.extended_content = @article.content+'<kiebass-cut/>'+@article.extended_content
+    @article.extended_content = (@article.content.nil? ? '' : @article.content)+'<kiebass-cut/>'+@article.extended_content
   end
   
   def update
