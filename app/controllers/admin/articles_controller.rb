@@ -7,8 +7,13 @@ class Admin::ArticlesController < Admin::BaseController
   def index
     @articles = Article.paginate(:page => params[:page], :per_page => 20, :order=>"created_at DESC")
   end
-
+  
+  def edit
+    @article.extended_content = @article.content+'<kiebass-cut/>'+@article.extended_content
+  end
+  
   def update
+    cut_article
     @article.attributes = params[:article]
     @article.save!
     redirect_to admin_articles_path
@@ -20,13 +25,19 @@ class Admin::ArticlesController < Admin::BaseController
   end
 
   def create
+    
+    cut_article
     @article = Article.new(params[:article])
     @article.save!
     redirect_to admin_articles_path
   end
 
   protected
-
+  def cut_article
+    @cut_content =  params[:article]["extended_content"].split('<kiebass-cut/>')
+    params[:article]["content"] =@cut_content[0]
+    params[:article]["extended_content"] =@cut_content[1]
+  end
   def find_article
     @article = Article.find(params[:id])
   end

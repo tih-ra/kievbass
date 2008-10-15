@@ -9,6 +9,16 @@
     <% if defined?(extended_content) && extended_content %>
       <%= RedCloth.new(article.extended_content).to_html %>
     <% end %>
+	
+	<% unless article.tag_list.empty? %>
+	<br/>
+	<%=image_tag "icons/tag.png", :size=>"14x14"%>
+	<% article.tag_counts.each do |tag| %>
+		<%= link_to tag.name, { :action => :tag, :id => tag.name } %>
+	<% end %>
+	<br/>
+	<br/>
+	<% end %>
   	<% if !params[:id] %>
 	<%= link_to "читать дальше", article_path(article.id), :anchor => "extended" %> / комментариев: <%= article.comments.count %> <% if session[:user] %> | <span class="selected"> новых: <strong> <%= new_comments_count(article) %> </strong></span> <% end %>
 	<% end %>

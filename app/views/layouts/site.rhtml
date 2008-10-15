@@ -35,6 +35,7 @@
                 <% unless @sidebar.nil? %>
                   <%= RedCloth.new(@sidebar.content).to_html %>
                 <% end %>
+				<%=render :partial => "includes/tag_cloud"%>
               </td>
             </tr>
           </table>

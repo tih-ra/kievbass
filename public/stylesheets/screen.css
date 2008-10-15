@@ -26,6 +26,11 @@ div.comment {
 	
 }
 
+.css1 { font-size: 1.0em; text-decoration: none; }
+.css2 { font-size: 1.2em; text-decoration: none; }
+.css3 { font-size: 1.4em; text-decoration: none; }
+.css4 { font-size: 1.6em; text-decoration: none; }
+  
 #total_comments_div {
 	float: right;
 	width: 300px;

@@ -3,6 +3,11 @@ class ArticlesController < ApplicationController
   def index
     @articles = Article.active_only.paginate(:page => params[:page], :per_page => 10)
   end
+  def tag
+     @tag = params[:id]
+     @articles = Article.paginate_tagged_with(params[:id], :page => params[:page], :per_page => 20)
+     render :action => :index
+  end
   
   def show
     @current_user = current_user

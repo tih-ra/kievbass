@@ -26,9 +26,6 @@ var Bte = {
 			return false;
 		}
 	},
-	cutToArea: function(id) {
-		$(id).value = $(id).value+"<kiebass-cut/>";
-	},
 	embedFormSubmit: function(id) {
 		$(id).value = $(id).value+"\n"+$('blogs_text_editor_embed_content').value
 		$('tinyMceEmbedInsert').hide();

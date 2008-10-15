@@ -29,8 +29,8 @@ module BlogsTextEditorHelper
   content_tag("div", :class => "tinyMceTopMenu", :style=>"width:100%;") do
       #BEGIN PART1
       cc1 = content_tag("div", :class => "part1") do
-            cc1_1 = content_tag("div", "#{tr['visual_editor']}", :id=>"tinyMceTopMenuVisual", :class=>"link", :onclick=>"$('#{object}_#{method}').setStyle({width:'740px'});Bte.changeCSSClass(this, 'link', 'selectedLink');Bte.changeCSSClass('tinyMceTopMenuHTML', 'selectedLink', 'link');$('tinyMceHTMLButtons').hide();$('tinyMceVisualButtons').hide();add_#{object}_#{method}();")
-            cc1_1 += content_tag("div", "#{tr['html_editor']}", :id=>"tinyMceTopMenuHTML", :class=>"selectedLink", :onclick=>"$('#{object}_#{method}').setStyle({width:'730px'});Bte.changeCSSClass(this, 'link', 'selectedLink');Bte.changeCSSClass('tinyMceTopMenuVisual', 'selectedLink', 'link');$('tinyMceVisualButtons').hide();$('tinyMceHTMLButtons').show();remove_#{object}_#{method}();")
+            cc1_1 = content_tag("div", "#{tr['visual_editor']}", :id=>"tinyMceTopMenuVisual", :class=>"link", :onclick=>"$('#{object}_#{method}').setStyle({width:'940px'});Bte.changeCSSClass(this, 'link', 'selectedLink');Bte.changeCSSClass('tinyMceTopMenuHTML', 'selectedLink', 'link');$('tinyMceHTMLButtons').hide();$('tinyMceVisualButtons').hide();add_#{object}_#{method}();")
+            cc1_1 += content_tag("div", "#{tr['html_editor']}", :id=>"tinyMceTopMenuHTML", :class=>"selectedLink", :onclick=>"$('#{object}_#{method}').setStyle({width:'930px'});Bte.changeCSSClass(this, 'link', 'selectedLink');Bte.changeCSSClass('tinyMceTopMenuVisual', 'selectedLink', 'link');$('tinyMceVisualButtons').hide();$('tinyMceHTMLButtons').show();remove_#{object}_#{method}();")
             cc1_1 +=content_tag("div", "&nbsp;", :class=>"empty")
       end
       #END PART1
@@ -46,6 +46,8 @@ module BlogsTextEditorHelper
         cc1_3 += content_tag("div", "#{tr['insert_picture']}", :style=>"float:left;margin:0 0 0 5px;", :onclick=>"Bte.showHideClicker('tinyMceImageInsert');$('blogs_text_editor_image_url').value='';return false;")
         cc1_3 += link_to image_tag("/stylesheets/blogs_text_editor/img/embed.png", :style=>"width:16px;height:16px;float:left;margin:5px 0 0 20px;cursor: pointer;"), "#", :onclick=>"Bte.showHideClicker('tinyMceEmbedInsert');$('blogs_text_editor_embed_content').value='';return false;"
         cc1_3 += content_tag("div", "#{tr['insert_embed']}", :style=>"float:left;margin:0 0 0 5px;", :onclick=>"Bte.showHideClicker('tinyMceEmbedInsert');$('blogs_text_editor_embed_content').value='';return false;")
+        cc1_3 += link_to image_tag("/stylesheets/blogs_text_editor/img/cut.png", :style=>"width:16px;height:16px;float:left;margin:5px 0 0 20px;cursor: pointer;"), "#", :onclick=>"Bte.cutToArea(\"#{object}_#{method}\"); return false;"
+        cc1_3 += content_tag("div", "cut", :style=>"float:left;margin:0 0 0 5px;", :onclick=>"Bte.cutToArea(\"#{object}_#{method}\"); return false;")
         cc1_3 += content_tag("div", "", :class=>"clear")
       end
       #END PART2

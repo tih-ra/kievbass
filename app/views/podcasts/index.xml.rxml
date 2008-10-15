@@ -20,3 +20,4 @@ xml.rss( :version=>"2.0", "xmlns:itunes" => "http://www.itunes.com/dtds/podcast-
   end
 end
 
+http://infostore.org/file/6096842/5103238/6568629x.jpg

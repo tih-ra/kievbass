@@ -2,8 +2,8 @@
 <%= error_messages_for "article"%>
 
 <%= f.text_field "title", :label => "Title", :required => true, :style=>"width:99%", :class=>"title" %>
-<%= f.text_area "content", :label => "Content", :required => true, :style=>"width:99%;height:100px",:class=>"mceNoEditor" %>
-<%=blogs_text_editor_text_area "article", "extended_content", {:style=>"width:740px;margin:0;", :class=>"bte_textarea"}%>
+<%#= f.text_area "content", :label => "Content", :required => true, :style=>"width:99%;height:100px",:class=>"mceNoEditor" %>
+<%=blogs_text_editor_text_area "article", "extended_content", {:style=>"width:940px;margin:0;", :class=>"bte_textarea"}%>
 <%#= f.text_area "extended_content", :label => "Extended content", :cols => 90, :style=>"width:99%;height:400px", :id=>"e_content"%>
 <%= f.text_field "tag_list", :label => "Tags", :style=>"width:99%", :class=>"title"  %>
 <%= f.check_box "is_active", :label => "Is Active" %>

@@ -1,0 +1,6 @@
+<div class="tagsCloud">
+	<% @tags = Article.tag_counts(:limit => 50, :order => 'count desc').sort {|x,y| x.name.downcase <=> y.name.downcase} %>
+	<% tag_cloud @tags, %w(css1 css2 css3 css4) do |tag, css_class| %>
+	   <%= link_to tag.name, { :controller=> :articles, :action => :tag, :id => tag.name }, :class => css_class %>
+	 <% end %>
+</div>

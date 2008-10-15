@@ -23,7 +23,16 @@ module ApplicationHelper
 			<a href=\"http://www.addthis.com/bookmark.php\" onmouseover=\"return addthis_open(this, '', '[URL]', 'FRENDID.com::#{title}')\" onmouseout=\"addthis_close()\" onclick=\"return addthis_sendto()\"><img src=\"http://s9.addthis.com/button1-share.gif\" width=\"125\" height=\"16\" border=\"0\" alt='' /></a><script type=\"text/javascript\" src=\"http://s7.addthis.com/js/152/addthis_widget.js\"></script>
 			<!-- AddThis Button END -->"
   end
-  
+  def tag_cloud(tags, classes)
+    return if tags.empty?
+    
+    max_count = tags.sort_by(&:count).last.count.to_f
+    
+    tags.each do |tag|
+      index = ((tag.count / max_count) * (classes.size - 1)).round
+      yield tag, classes[index]
+    end
+  end
   def new_comments_count(obj)
 		subscribe = obj.user_subscribes.find_by_user_id(current_user.id)
   	unless subscribe.nil?
