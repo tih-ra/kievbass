@@ -7,7 +7,7 @@
   <div class="body">
     <%= RedCloth.new(article.content).to_html %>
     <% if defined?(extended_content) && extended_content %>
-      <%= RedCloth.new(article.extended_content).to_html %>
+      <%= RedCloth.new(article.extended_content.nil? ? article.content : article.extended_content).to_html %>
     <% end %>
 	
 	<% unless article.tag_list.empty? %>
